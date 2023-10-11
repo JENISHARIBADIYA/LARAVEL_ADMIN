@@ -67,7 +67,8 @@ $selectdMaharashtra = ($data['current_student'][0]->state == 'Maharashtra') ? 's
                           @csrf
                             <div class="card-body">
 
-                                <div class="form-group">
+                              
+                                 <div class="form-group">
                                     <label for="">First Name</label>
                                     <input class="form-control" type="text" placeholder="Enter First Name" name="firstName" id="firstName" value="{{ $data['current_student'][0]->firstName }}">
                                 </div>

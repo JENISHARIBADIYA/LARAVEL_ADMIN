@@ -13,10 +13,15 @@
           <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
         </li>
-        <li class="nav-item menu-open">
-          <a href="logout.php" class="nav-link">
-            <p style="margin-left: 95rem; margin-top:2px;"><i class="fas fa-sign-out-alt fa-2x"></i></p>
-          </a>
+        <li class="nav-item menu-open" style="margin-left:95rem;">
+         <a class="dropdown-item nav-link" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        <i class="fas fa-sign-out-alt fa-2x"></i>
+                                    </a>   
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+              @csrf
+          </form>    
         </li>
       </ul>
 

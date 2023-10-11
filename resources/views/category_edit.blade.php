@@ -46,9 +46,8 @@
                                     <div class="form-group">
                                         <label for="">Category Image</label>
                                         <input class="form-control" type="file" name="cat_image" id="cat_image">
-                                        <img src='{{ asset($data['current_category'][0]->cat_image) }}' height="50" style="margin-top: 10px;" />
+                                        <img src='{{ asset($data['current_category'][0]->cat_image) }}' height="150" style="margin-top: 10px;" />
                                     </div>
-
                                     <div class="form-group">
                                         <label for="">Status</label>
                                         <div class="custom-control custom-radio">

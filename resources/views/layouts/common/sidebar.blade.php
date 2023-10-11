@@ -15,7 +15,7 @@
                 <img src="{{asset('dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">Alexander Pierce</a>
+                <a href="#" class="d-block">{{auth()->user()->name}}</a>
             </div>
         </div>
 
@@ -63,14 +63,13 @@
                                 <p class="ml-2">Categories</p>
                             </a>
                         </li>
-                       
                         <li class="nav-item menu-open">
-                            <a href="changePassword.php" class="nav-link">
+                            <a href="{{route('changepassword')}}" class="nav-link">
                                 <i class="fa fa-key" aria-hidden="true"></i>
                                 <p class="ml-2">Change Password</p>
                             </a>
                         <li class="nav-item menu-open">
-                            <a href="profile.php" class="nav-link">
+                            <a href="updateprofile" class="nav-link">
                                 <svg width="20" height="20" fill="none" stroke="currentColor"
                                     stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">

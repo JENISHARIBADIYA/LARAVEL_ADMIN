@@ -43,7 +43,7 @@
                                 </div>
                                  <div class="form-group">
                                     <label for="">Category Image : </label>
-                                    <img src='{{asset($data["current_cat"]->cat_image)}}' height="50" style="margin-top: 10px;" />
+                                    <img src='{{asset($data["current_cat"]->cat_image)}}' height="150" style="margin-top: 10px;" />
                                 </div>
                                 <div class="form-group">
                                     <label for="">Category Status : </label>

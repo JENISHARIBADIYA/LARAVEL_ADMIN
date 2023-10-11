@@ -17,24 +17,30 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/login', function () {
+    return view('welcome');
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // catrgory routes
-Route::get('categories', [App\Http\Controllers\CategoryController::class, 'index'])->name('categories');
+// Route::get('categories', [App\Http\Controllers\CategoryController::class, 'index'])->name('categories');
 
-Route::get('cat_add', [App\Http\Controllers\CategoryController::class, 'create'])->name('cat_add');
+// Route::POST('getCategoriesByStatus', [App\Http\Controllers\CategoryController::class, 'getCategoriesByStatus'])->name('categories');
 
-Route::post('cat_save', [App\Http\Controllers\CategoryController::class, 'store'])->name('cat_save');
+// Route::get('cat_add', [App\Http\Controllers\CategoryController::class, 'create'])->name('cat_add');
 
-Route::get('cat_edit/{id}', [App\Http\Controllers\CategoryController::class, 'edit'])->name('cat_edit');
+// Route::post('cat_save', [App\Http\Controllers\CategoryController::class, 'store'])->name('cat_save');
 
-Route::post('cat_update/{id}', [App\Http\Controllers\CategoryController::class, 'update'])->name('cat_update');
+// Route::get('cat_edit/{id}', [App\Http\Controllers\CategoryController::class, 'edit'])->name('cat_edit');
 
-Route::get('cat_delete/{id}', [App\Http\Controllers\CategoryController::class, 'destroy'])->name('cat_delete');
+// Route::post('cat_update/{id}', [App\Http\Controllers\CategoryController::class, 'update'])->name('cat_update');
 
-Route::get('cat_view/{id}', [App\Http\Controllers\CategoryController::class, 'show'])->name('cat_view');
+// Route::get('cat_delete/{id}', [App\Http\Controllers\CategoryController::class, 'destroy'])->name('cat_delete');
+
+// Route::get('cat_view/{id}', [App\Http\Controllers\CategoryController::class, 'show'])->name('cat_view');
 
 // student routes
 Route::get('students', [App\Http\Controllers\studentController::class, 'index'])->name('students');
@@ -51,17 +57,27 @@ Route::get('student_delete/{id}', [App\Http\Controllers\studentController::class
 
 Route::get('student_view/{id}', [App\Http\Controllers\studentController::class, 'show'])->name('student_view');
 
-// subject routes
-Route::get('subjects', [App\Http\Controllers\subjectController::class, 'index'])->name('subjects');
+// catrgory routes
+Route::get('categories', [App\Http\Controllers\CategoryController::class, 'index'])->name('categories');
 
-Route::get('subject_add', [App\Http\Controllers\subjectController::class, 'create'])->name('subject_add');
+Route::get('cat_add', [App\Http\Controllers\CategoryController::class, 'create'])->name('cat_add');
 
-Route::post('subject_save', [App\Http\Controllers\subjectController::class, 'store'])->name('subject_save');
+Route::post('cat_save', [App\Http\Controllers\CategoryController::class, 'store'])->name('cat_save');
 
-Route::get('subject_edit/{id}', [App\Http\Controllers\subjectController::class, 'edit'])->name('subject_edit');
+Route::get('cat_edit/{id}', [App\Http\Controllers\CategoryController::class, 'edit'])->name('cat_edit');
 
-Route::post('subject_update/{id}', [App\Http\Controllers\subjectController::class, 'update'])->name('subject_update');
+Route::post('cat_update/{id}', [App\Http\Controllers\CategoryController::class, 'update'])->name('cat_update');
 
-Route::get('subject_delete/{id}', [App\Http\Controllers\subjectController::class, 'destroy'])->name('subject_delete');
+Route::get('cat_delete/{id}', [App\Http\Controllers\CategoryController::class, 'destroy'])->name('cat_delete');
 
-Route::get('subject_view/{id}', [App\Http\Controllers\subjectController::class, 'show'])->name('subject_view');
+Route::get('cat_view/{id}', [App\Http\Controllers\CategoryController::class, 'show'])->name('cat_view');
+
+
+
+// change password
+Route::get('changepassword', [App\Http\Controllers\HomeController::class, 'changePass'])->name('changepassword');
+Route::post('updatePass', [App\Http\Controllers\HomeController::class, 'updatePass'])->name('updatePass');
+
+// update profile
+Route::get('updateprofile', [App\Http\Controllers\HomeController::class, 'updateProfile'])->name('updateprofile');
+Route::post('saveProfile', [App\Http\Controllers\HomeController::class, 'saveProfile'])->name('saveProfile');

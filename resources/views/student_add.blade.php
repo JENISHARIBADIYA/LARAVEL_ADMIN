@@ -50,9 +50,9 @@
 
                                     <div class="form-group">
                                         <label for="">First Name</label>
-                                        <input class="form-control" type="text" placeholder="Enter First Name" name="firstname" id="firstname">
+                                        <input class="form-control" type="text" placeholder="Enter First Name" name="firstName" id="firstName">
                                     </div>
-
+    
                                     <div class="form-group">
                                         <label for="">Middle Name</label>
                                         <input class="form-control" type="text" placeholder="Enter Middle Name" name="middleName" id="middleName">
@@ -81,6 +81,7 @@
                                     <div class="form-group">
                                         <label for="">City</label>
                                         <select class="custom-select form-control-border" id="exampleSelectBorder" name="city">
+                                            <option value="select city">-- Select City --</option>
                                             <option value="Rajkot">Rajkot</option>
                                             <option value="Surat">Surat</option>
                                             <option value="Ahmedabad">Ahmedabad</option>
@@ -97,6 +98,7 @@
                                     <div class="form-group">
                                         <label for="">State</label>
                                         <select class="custom-select form-control-border" id="exampleSelectBorder" name="state">
+                                            <option value="select state">-- Select State --</option>
                                             <option value="Gujarat">Gujarat</option>
                                             <option value="Rajsthan">Rajsthan</option>
                                             <option value="UP">UP</option>
@@ -107,6 +109,7 @@
                                     <div class="form-group">
                                         <label for="">Country</label>
                                         <select class="custom-select form-control-border" id="exampleSelectBorder" name="country">
+                                            <option value="select country">-- Select Country --</option>
                                             <option value="India">India</option>
                                             <option value="USA">USA</option>
                                             <option value="UK">UK</option>

@@ -40,6 +40,7 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
+
         $validator = Validator::make($request->all(), [
             'firstName' => 'required',
             'middleName' => 'required',
@@ -105,22 +106,22 @@ class StudentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // $validator = Validator::make($request->all(), [
-        //     'firstName' => 'required',
-        //     'middleName' => 'required',
-        //     'lastName' => 'required',
-        //     'email' => 'required',
-        //     'phone_no' => 'required',
-        //     'dob' => 'required',
-        //     'city' => 'required',
-        //     'state' => 'required',
-        //     'country' => 'required'
-        // ]);
-        // if ($validator->fails()) {
-        //     return redirect('student_edit')
-        //         ->withErrors($validator)
-        //         ->withInput();
-        // }
+        $validator = Validator::make($request->all(), [
+            'firstName' => 'required',
+            'middleName' => 'required',
+            'lastName' => 'required',
+            'email' => 'required',
+            'phone_no' => 'required',
+            'dob' => 'required',
+            'city' => 'required',
+            'state' => 'required',
+            'country' => 'required'
+        ]);
+        if ($validator->fails()) {
+            return redirect('student_edit')
+                ->withErrors($validator)
+                ->withInput();
+        }
         $editstudent = students::find($id);
         $editstudent->firstName = $request->input('firstName');
         $editstudent->middleName = $request->input('middleName');
